@@ -9,6 +9,9 @@ import Cadastro from './pages/cadastro/Cadastro';
 import Home from './pages/home/Home';
 import { AuthProvider } from './contexts/AuthContext';
 import SobreNos from './pages/sobreNos/SobreNos';              
+import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
+import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria';
+import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 
 
 
@@ -25,6 +28,10 @@ function App() {
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
               <Route path="/SobreNos" element={<SobreNos />} />
+              <Route path="/categoria" element={<ListaCategoria />} />
+              <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+              <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
             </Routes>
           </div>
           <Footer />
