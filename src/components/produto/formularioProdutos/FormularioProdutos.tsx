@@ -10,16 +10,12 @@ import { toastAlerta } from '../../../utils/toastAlerta';
 function FormularioProdutos() {
   let navigate = useNavigate();
 
-
   const { id } = useParams<{ id: string }>();
-
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-
   const [categorias, setCategorias] = useState<Categoria[]>([]);
-
 
   const [categoria, setCategoria] = useState<Categoria>({
     id: 0,
@@ -27,7 +23,6 @@ function FormularioProdutos() {
     descricao: '',
     produto: null,
   });
-
 
   const [produto, setProdutos] = useState<Produto>({
     id: 0,
@@ -39,7 +34,6 @@ function FormularioProdutos() {
     usuario: null,
   });
 
-
   async function bucarProdutoporId(id: string) {
     await buscar(`/produto/${id}`, setProdutos, {
       headers: {
@@ -47,7 +41,6 @@ function FormularioProdutos() {
       },
     });
   }
-
 
   async function buscarCategoriaporId(id: string) {
     await buscar(`/categoria/${id}`, setCategoria, {
@@ -57,7 +50,6 @@ function FormularioProdutos() {
     });
   }
 
-
   async function buscarCategoria() {
     await buscar('/categoria', setCategorias, {
       headers: {
@@ -66,14 +58,12 @@ function FormularioProdutos() {
     });
   }
 
-
   useEffect(() => {
     if (token === '') {
       toastAlerta('Você precisa estar logado', 'info');
       navigate('/');
     }
   }, [token]);
-
 
   useEffect(() => {
     buscarCategoria();
@@ -85,14 +75,12 @@ function FormularioProdutos() {
     }
   }, [id]);
 
-
   useEffect(() => {
     setProdutos({
       ...produto,
       categoria: categoria,
     });
   }, [categoria]);
-
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
     setProdutos({
@@ -103,18 +91,14 @@ function FormularioProdutos() {
     });
   }
 
-
   function retornar() {
     navigate('/produto');
   }
 
-
   async function gerarNovoProduto(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
-
     console.log({ produto });
-
 
     if (id != undefined) {
       try {
@@ -153,9 +137,7 @@ function FormularioProdutos() {
     }
   }
 
-
   const carregandoCategoria = categoria.categoria === '';
-
 
   return (
     <div className="container flex flex-col mx-auto items-center">
@@ -187,35 +169,35 @@ function FormularioProdutos() {
             className="border-2 border-slate-700 rounded p-2"
           />
           </div>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="preco">Preço do produto</label>
-                    <input
-                        value={produto.preco}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="number"
-                        placeholder="Preço"
-                        name="preco"
-                        required
-                        className="border-2 border-slate-700 rounded p-2 dark:text-black"
-                    />
-                </div>
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="foto">Foto do Produto</label>
-                    <input
-                        value={produto.foto}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="text"
-                        placeholder="Foto"
-                        name="foto"
-                        className="border-2 border-slate-700 rounded p-2"
-                    />
-                </div>
-        <div className="flex flex-col gap-2">
-          <p>Categoria do produto</p>
-          <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaporId(e.currentTarget.value)}>
-            <option value="" selected disabled>Selecione uma categoria</option>
-            {categorias.map((categoria) => (
-              <>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="preco">Preço do produto</label>
+            <input
+              value={produto.preco}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+              type="number"
+              placeholder="Preço"
+              name="preco"
+              required
+              className="border-2 border-slate-700 rounded p-2 dark:text-black"
+           />
+           </div>
+           <div className="flex flex-col gap-2">
+             <label htmlFor="foto">Foto do Produto</label>
+             <input
+               value={produto.foto}
+               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+               type="text"
+               placeholder="Foto"
+               name="foto"
+               className="border-2 border-slate-700 rounded p-2"
+            />
+            </div>
+            <div className="flex flex-col gap-2">
+            <p>Categoria do produto</p>
+            <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaporId(e.currentTarget.value)}>
+              <option value="" selected disabled>Selecione uma categoria</option>
+              {categorias.map((categoria) => (
+                <>
                 <option value={categoria.id} >{categoria.categoria}</option>
               </>
             ))}
@@ -228,6 +210,5 @@ function FormularioProdutos() {
     </div>
   );
 }
-
 
 export default FormularioProdutos;
