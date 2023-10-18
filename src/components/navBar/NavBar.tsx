@@ -16,10 +16,11 @@ function Navbar() {
               <Link to='/login' className='hover:underline'>Login</Link>
               <Link to='/home' className='hover:underline'>Home</Link>
               <Link to='/sobreNos' className='hover:underline'>Sobre nós</Link>
-              <div className='hover:underline'>Produtos</div>
               <Link to='/categoria' className='hover:underline'>Categorias</Link>
               <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
               <Link to='/cadastro' className='hover:underline'>Cadastrar</Link>
+              <Link to='/produto' className='hover:underline'>Produtos </Link>
+
               <div className='hover:underline'>Perfil</div>
               <div className='hover:underline'>Sair</div>
             </div>
