@@ -24,12 +24,11 @@ function Navbar() {
           <div className="container flex justify-between text-lg pr-5 pl-5">
             <div className='flex flex-shrink-0 items-center'>
             <img src={logofolha} alt="" className='h-14 w-auto' />
-            <div className='text-2x1 font-bold uppercase'>Eco Ybyra</div>
+            <Link to='/home' className='text-2x1 font-bold uppercase'>Eco Ybyra</Link>
             </div>
 
             <div className='flex gap-6'>
               <Link to='/login' className='hover:underline'>Login</Link>
-              <Link to='/home' className='hover:underline'>Home</Link>
               <Link to='/sobreNos' className='hover:underline'>Sobre nós</Link>
               <Link to='/categoria' className='hover:underline'>Categorias</Link>
               <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>

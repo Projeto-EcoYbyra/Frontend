@@ -18,9 +18,9 @@ function CardProdutos({ prod}: CardProdutoProps) {
   const { adicionarProduto } = useContext(AuthContext)
 
   return (
-    <div className=' border flex flex-col rounded-md overflow-hidden justify-between'>
+    <div className='border flex flex-col rounded-md overflow-hidden justify-between'>
       <div>
-        <div className="flex bg-indigo-300 items-center gap-4">
+        <div className="flex bg-lime-300 items-center gap-4">
           <img src={prod.foto} className='rounded-e-sm' alt="" />
         </div>
         <div className='p-4 '>

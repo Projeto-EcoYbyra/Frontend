@@ -13,6 +13,11 @@ function Carrinho() {
 
     const { itens, limparCart, comprar } = useContext(AuthContext)
 
+    function Comprar() {
+        comprar()
+        navigate("/home")
+    }
+
     const subtotal = itens.reduce((total, itens) => {
         return total + (itens.preco * itens.id);
     }, 0)
@@ -86,7 +91,7 @@ function Carrinho() {
                     <div className='flex justify-center'>
                         <button 
                             className={`px-3 mt-5 py-2 text-sm font-medium text-center text-white bg-[#03A678] transition-all duration-300 ease-in-out rounded-lg hover:bg-[#014040] focus:outline-none ${selectedPayment && subtotal > 0 ? 'dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black' : 'opacity-50 cursor-not-allowed'}`}
-                            onClick={comprar}
+                            onClick={Comprar}
                             disabled={subtotal === 0 || !selectedPayment}> Finalizar Compra </button>
                     </div>
                 </div>

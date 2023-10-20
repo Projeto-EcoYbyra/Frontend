@@ -4,6 +4,7 @@ import UsuarioLogin from "../models/UsuarioLogin"
 import { login } from "../services/Service"
 import { toastAlerta } from "../utils/toastAlerta"
 import Produto from "../models/Produto"
+import { useNavigate } from 'react-router-dom';
 
 interface AuthContextProps {
     usuario: UsuarioLogin
@@ -43,12 +44,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setIsLoading(true)
         try {
             await login(`/usuarios/logar`, userLogin, setUsuario)
-            alert("Usuário logado com sucesso")
+            toastAlerta("Usuário logado com sucesso", "sucesso")
             setIsLoading(false)
 
         } catch (error) {
             console.log(error)
-            alert("Dados do usuário inconsistentes")
+            toastAlerta("Dados do usuário inconsistentes", "info")
             setIsLoading(false)
         }
     }
@@ -70,6 +71,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
        const [itensComprados, setItensComprados] = useState<Produto[]>([]);
        const [pedido, setPedido] = useState(0);
    
+
        function adicionarProduto(produto: Produto) {
            const itemExiste = itens.find((item) => item.id === produto.id);
    
