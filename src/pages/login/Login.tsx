@@ -72,7 +72,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
             animationDuration="0.75"
             width="24"
             visible={true}
-          /> :
+          /> : 
             <span>Entrar</span>}
           </button>
 
