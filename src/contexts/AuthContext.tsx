@@ -84,21 +84,24 @@ export function AuthProvider({ children }: AuthProviderProps) {
            }
            toastAlerta("Produto adicionado ao carrinho", 'sucesso')
        }
-   
+
    
        function removerProduto(produtoId: number) {
-           const updateItens = itens.map((item) => {
-               if (item.id === produtoId) {
-                   // Verifica se a id é maior que 1 antes de decrementar
-                   if (item.id > 0) {
-                       return { ...item, id: item.id - 1 };
-                   } else {
-                       toastAlerta("O carrinho está vazio", 'info')
-                       return item;
-                   }
-               }
-               return item;
-           });
+        let itemRemovido = false; // Variável para controlar se um item foi removido
+    
+        const updateItens = itens.map((item) => {
+            if (item.id === produtoId) {
+                // Verifica se a id é maior que 1 antes de decrementar
+                if (item.id > 1) {
+                    itemRemovido = true; // Marca que um item foi removido
+                    return { ...item, id: item.id - 1 };
+                } else {
+                    toastAlerta("O carrinho está vazio", 'info');
+                    return item;
+                }
+            }
+            return item;
+        });
        
            try {
                setItens(updateItens);

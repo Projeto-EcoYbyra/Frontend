@@ -3,6 +3,7 @@ import { AuthContext } from '../../contexts/AuthContext'
 import CardProdutos from '../../components/produto/cardProdutos/CardProdutos'
 import { useNavigate } from 'react-router-dom'
 
+
 function Carrinho() {
     let navigate = useNavigate();
 
@@ -35,6 +36,7 @@ function Carrinho() {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2,
                     }).format(subtotal)}</h1>
+
                     <div className='btn-subtotal mt-3 p-2'>
                         <button className={`px-3 py-2 text-sm font-medium text-center text-white bg-red-800 transition-all duration-300 ease-in-out rounded-lg hover:bg-red-600 focus:outline-none ${subtotal > 0 ? 'dark:bg-red-500 dark:hover:bg-white dark:hover:text-black' : 'opacity-50 cursor-not-allowed'}`}
                             onClick={limparCart}
@@ -47,7 +49,18 @@ function Carrinho() {
                     <h1 className='font-bold text-lg dark:text-white mt-5 ml-5'>Selecione a forma de pagamento: </h1>
                     <div className='flex flex-col p-3 justify-center'>
                         <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700 mt-5">
-                            <div className='flex itens-center'>
+                            <div className='static itens-center'>
+                                <input
+                                    type="radio"
+                                    id="pagamento verde"
+                                    name="payment"
+                                    value="pagamento verde"
+                                    onChange={() => setSelectedPayment('pagamento verde')} />
+                                <label htmlFor="pagamento verde" className='ml-5'><p className='font-bold text-lg dark:text-white'>Pagamento Verde 🌳</p></label>
+                            </div>
+                        </div>
+                        <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
+                            <div className='static itens-center'>
                                 <input
                                     type="radio"
                                     id="pix"
@@ -59,7 +72,7 @@ function Carrinho() {
                             </div>
                         </div>
                         <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
-                            <div className='flex itens-center'>
+                            <div className='static itens-center'>
                                 <input
                                     type="radio"
                                     id="cartao"
@@ -67,17 +80,6 @@ function Carrinho() {
                                     value="cartao"
                                     onChange={() => setSelectedPayment('cartao')} />
                                 <label htmlFor="cartão" className='ml-5'><p className='font-bold text-lg dark:text-white'>Cartão 💳</p></label>
-                            </div>
-                        </div>
-                        <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
-                            <div className='flex itens-center'>
-                            <input
-                                type="radio"
-                                id="boleto"
-                                name="payment"
-                                value="boleto"
-                                onChange={() => setSelectedPayment('boleto')} />
-                            <label htmlFor="boleto" className='ml-5'><p className='font-bold text-lg dark:text-white'>Boleto 🎫</p></label>
                             </div>
                         </div>
                     </div>
