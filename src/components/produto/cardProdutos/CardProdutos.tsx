@@ -1,14 +1,22 @@
-import React from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Produto from '../../../models/Produto'
-
+import { AuthContext } from '../../../contexts/AuthContext';
 
 interface CardProdutoProps {
   prod: Produto
+  noCarrinho?: boolean;
 }
 
+function CardProdutos({ prod, noCarrinho }: CardProdutoProps) {
+  const [valor, setValor] = useState(prod.id);
 
-function CardProdutos({prod}: CardProdutoProps) {
+  useEffect(() => {
+      setValor(prod.id)
+  }, [prod.id]);
+
+  const { adicionarProduto, removerProduto } = useContext(AuthContext)
+
   return (
     <div className=' border flex flex-col rounded-md overflow-hidden justify-between'>
       <div>
@@ -22,6 +30,24 @@ function CardProdutos({prod}: CardProdutoProps) {
                             minimumFractionDigits: 2,
                             maximumFractionDigits: 2,
                         }).format(prod.preco)}</p>
+
+                        : noCarrinho ? (
+                          <>
+                            <div className='mt-2 flex flex-col items-center'>
+                              <button className="items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#03A678] transition-all duration-300 ease-in-out rounded-lg hover:bg-[#014040] focus:outline-none dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black"
+                                        onClick={() => {
+                                            adicionarProduto(prod)
+                                            setValor(valor - 1);
+                                        }}>
+                                        Adicionar 🛒
+                              </button>
+                              <button className="mt-2 items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#03A678] transition-all duration-300 ease-in-out rounded-lg hover:bg-[#014040] focus:outline-none dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black"
+                                        onClick={() => { removerProduto(prod.id) }}>
+                                        Remover ❌
+                              </button>
+                            </div>
+                          </>
+                        )
         </div>
       </div>
       <div className="flex">
@@ -35,6 +61,5 @@ function CardProdutos({prod}: CardProdutoProps) {
     </div>
   )
 }
-
 
 export default CardProdutos
