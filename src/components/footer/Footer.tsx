@@ -16,7 +16,7 @@ function Footer() {
                   className="h-8 mr-3"
                   alt="EcoYbyra Logo"
                 />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                   EcoYbyra
                 </span>
               </a>
@@ -24,10 +24,10 @@ function Footer() {
             {/* Div dos Atalhos */}
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                   ATALHOS
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-gray-500 font-medium">
                   <li className="mb-4">
                     <a href="#" className="hover:underline">
                       Início
@@ -42,10 +42,10 @@ function Footer() {
               </div>
               {/* Div dos Encontre-Nos */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                   Encontre-Nos
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-gray-500 font-medium">
                   <li className="mb-4">
                     <a
                       href="https://github.com/Projeto-EcoYbyra"
@@ -68,10 +68,10 @@ function Footer() {
               </div>
               {/* Div da ODS */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                   Nossa ODS
                 </h2>
-                <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-gray-500 font-medium">
                   <li className="mb-4">
                     <a
                       href="https://brasil.un.org/pt-br/sdgs/17"
@@ -95,12 +95,12 @@ function Footer() {
             </div>
           </div>
           {/* Linha de Separação */}
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
 
           {/* Div Pai dos Ícones e EcoYbyra Copyright */}
           <div className="sm:flex sm:items-center flex-col-reverse">
             {/* Div do Copyright EcoYbyra */}
-            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 mt-4">
+            <span className="text-sm text-gray-500 sm:text-center mt-4">
               © 2023{" "}
               <a href="#" className="hover:underline">
                 EcoYbyra™
@@ -112,7 +112,7 @@ function Footer() {
               {/* Contato */}
               <a
                 href="https://linktr.ee/ybyraeco"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-500 hover:text-gray-900 hover:text-white"
                 target="_blank"
               >
                 <svg
@@ -130,7 +130,7 @@ function Footer() {
               {/* Github */}
               <a
                 href="https://github.com/Projeto-EcoYbyra"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-500 hover:text-gray-900 hover:text-white"
                 target="_blank"
               >
                 <svg
