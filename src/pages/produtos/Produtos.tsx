@@ -1,24 +1,24 @@
 import ListaProdutos from '../../components/produto/listaProdutos/ListaProdutos';
-//import { Carousel } from 'flowbite-react';
+import { Carousel } from 'flowbite-react';
 import { Link } from 'react-router-dom';
 
 function Produtos() {
     return (
         <>
             <div className='relative w-full dark:bg-black'>
-                {/* <div className='relative h-[500px] overflow-hidden dark:bg-black'>
+                <div className='relative h-[500px] overflow-hidden dark:bg-black'>
                     <Carousel className='bg-white h-full dark:bg-black'>
                         <img
                             alt="..."
-                            src={bannerNutri}
+                            src='http://www.w3schools.com/tags/img_girl.jpg'
                             className=''
                         />
                         <img
                             alt="..."
-                            src={bannerEco}
+                            src='https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2015/09/26/150926165742__85730600_monkey2.jpg'
                         />
                     </Carousel>
-                </div> */}
+                </div>
             </div>
 
             <div className="bg-white dark:bg-black">

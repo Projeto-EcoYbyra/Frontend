@@ -46,7 +46,7 @@ function CardProdutos({ prod, isPerfil}: CardProdutoProps) {
                             maximumFractionDigits: 2,
                         }).format(prod.preco)}
                 </p>
-                <button className="items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#03A678] transition-all duration-300 ease-in-out rounded-lg hover:bg-[#014040] focus:outline-none dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black"
+                <button className="items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#3f6212] hover:text-black transition-all duration-300 ease-in-out rounded-lg hover:bg-[#bef264] focus:outline-none dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black"
                   onClick={() => {
                   adicionarProduto(prod)
                   setValor(valor - 1);

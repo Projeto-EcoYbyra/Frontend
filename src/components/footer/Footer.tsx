@@ -1,12 +1,10 @@
-import React from "react";
-import { FacebookLogo, LinkedinLogo } from "@phosphor-icons/react";
-import { GithubLogo } from "@phosphor-icons/react/dist/ssr/GithubLogo";
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
     <>
-      <footer className="bg-black">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <footer className="bg-lime-800">
+        <div className="mx-auto w-full max-w-screen-xl p-4 py-4 lg:py-4">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               {/* Logo Clicável */}
@@ -16,37 +14,35 @@ function Footer() {
                   className="h-8 mr-3"
                   alt="EcoYbyra Logo"
                 />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                  EcoYbyra
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-lime-100">
+                  EcoYbyrá
                 </span>
               </a>
             </div>
             {/* Div dos Atalhos */}
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                  ATALHOS
-                </h2>
-                <ul className="text-gray-500 font-medium">
-                  <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                <ul className="text-lime-100 font-medium">
+                  <li className="mb-2">
+                  <Link to='/home'>
+                    <a className="hover:underline">
                       Início
                     </a>
+                  </Link>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                  <Link to='/sobreNos'>
+                    <a className="hover:underline">
                       Sobre Nós
                     </a>
+                  </Link>
                   </li>
                 </ul>
               </div>
               {/* Div dos Encontre-Nos */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                  Encontre-Nos
-                </h2>
-                <ul className="text-gray-500 font-medium">
-                  <li className="mb-4">
+                <ul className="text-lime-100 font-medium">
+                  <li className="mb-2">
                     <a
                       href="https://github.com/Projeto-EcoYbyra"
                       className="hover:underline "
@@ -68,11 +64,8 @@ function Footer() {
               </div>
               {/* Div da ODS */}
               <div>
-                <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                  Nossa ODS
-                </h2>
-                <ul className="text-gray-500 font-medium">
-                  <li className="mb-4">
+                <ul className="text-lime-100 font-medium">
+                  <li className="mb-2">
                     <a
                       href="https://brasil.un.org/pt-br/sdgs/17"
                       className="hover:underline"
@@ -95,12 +88,12 @@ function Footer() {
             </div>
           </div>
           {/* Linha de Separação */}
-          <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+          <hr className="my-4 border-lime-100 sm:mx-auto lg:my-4" />
 
           {/* Div Pai dos Ícones e EcoYbyra Copyright */}
           <div className="sm:flex sm:items-center flex-col-reverse">
             {/* Div do Copyright EcoYbyra */}
-            <span className="text-sm text-gray-500 sm:text-center mt-4">
+            <span className="text-xs text-lime-100 sm:text-center mt-2">
               © 2023{" "}
               <a href="#" className="hover:underline">
                 EcoYbyra™
@@ -108,15 +101,15 @@ function Footer() {
             </span>
 
             {/* Div do Contato e do Github */}
-            <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+            <div className="flex mt-10 space-x-4 sm:justify-center sm:mt-0">
               {/* Contato */}
               <a
                 href="https://linktr.ee/ybyraeco"
-                className="text-gray-500 hover:text-gray-900 hover:text-white"
+                className="text-lime-100 hover:text-lime-100"
                 target="_blank"
               >
                 <svg
-                  className="w-8 h-8"
+                  className="w-6 h-6"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -130,11 +123,11 @@ function Footer() {
               {/* Github */}
               <a
                 href="https://github.com/Projeto-EcoYbyra"
-                className="text-gray-500 hover:text-gray-900 hover:text-white"
+                className="text-lime-100 hover:text-lime-100"
                 target="_blank"
               >
                 <svg
-                  className="w-8 h-8"
+                  className="w-6 h-6"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"

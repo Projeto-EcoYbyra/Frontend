@@ -15,6 +15,12 @@
     object-fit: cover !important;
 }
 
+.img-carrosel {
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 200px;
+}
+
 .box2 img{
     object-fit: cover;
 }
@@ -24,5 +30,7 @@
     width: 100%;
     height: 100%;
   }
+
+
 
   
