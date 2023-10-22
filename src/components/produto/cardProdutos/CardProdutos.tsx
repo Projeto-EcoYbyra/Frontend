@@ -87,3 +87,4 @@ function CardProdutos({ prod, isPerfil}: CardProdutoProps) {
 }
 
 export default CardProdutos
+

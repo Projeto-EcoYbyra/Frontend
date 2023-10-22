@@ -17,7 +17,7 @@ function Produtos() {
                             alt="..."
                             src={bannerEco}
                         />
-                    </Carousel>o
+                    </Carousel>
                 </div> */}
             </div>
 
