@@ -2,6 +2,8 @@ import { createContext, ReactNode, useState } from "react"
 
 import UsuarioLogin from "../models/UsuarioLogin"
 import { login } from "../services/Service"
+import { toastAlerta } from "../utils/toastAlerta"
+import Produto from "../models/Produto"
 //import { toastAlerta } from "../utils/toastAlerta"
 
 interface AuthContextProps {
@@ -9,6 +11,14 @@ interface AuthContextProps {
     handleLogout(): void
     handleLogin(usuario: UsuarioLogin): Promise<void>
     isLoading: boolean
+    adicionarProduto: (produto: Produto) => void
+    removerProduto: (produtoId: number) => void
+    limparCart: () => void
+    comprar: () => void
+    itens: Produto[]
+    quantidadeItens: number
+    itensComprados: Produto[]
+    pedido: number
 }
 
 interface AuthProviderProps {
@@ -55,8 +65,69 @@ export function AuthProvider({ children }: AuthProviderProps) {
         })
     }
 
+    // CÓDIGO DO CARRINHO
+    const [itens, setItens] = useState<Produto[]>([])
+    const quantidadeItensNoCarrinho = itens.reduce((total, item) => total + item.id, 0);
+    const [itensComprados, setItensComprados] = useState<Produto[]>([]);
+    const [pedido, setPedido] = useState(0);
+
+    function adicionarProduto(produto: Produto) {
+        const itemExiste = itens.find((item) => item.id === produto.id);
+
+        if(itemExiste) {
+            setItens((state) =>
+                state.map((item) =>
+                item.id === produto.id ? { ...item, id: item.id + 1 } : item
+                )
+            );
+        } else {
+            setItens((state) => [...state, { ...produto, id: 1 }]);
+        }
+        toastAlerta("Produto adicionado ao carrinho", 'sucesso')
+    }
+
+
+    function removerProduto(produtoId: number) {
+     let itemRemovido = false; // Variável para controlar se um item foi removido
+ 
+     const updateItens = itens.map((item) => {
+         if (item.id === produtoId) {
+             // Verifica se a id é maior que 1 antes de decrementar
+             if (item.id > 1) {
+                 itemRemovido = true; // Marca que um item foi removido
+                 return { ...item, id: item.id - 1 };
+             } else {
+                 toastAlerta("O carrinho está vazio", 'info');
+                 return item;
+             }
+         }
+         return item;
+     });
+    
+        try {
+            setItens(updateItens);
+            toastAlerta("Uma unidade do produto foi removida do carrinho", 'sucesso');
+        } catch(error:any) {
+            console.log(error);
+            toastAlerta('Ocorreu um erro ao remover o produto', 'erro');
+        }
+    }
+
+    function comprar() {
+        const itensComprados = [...itens];
+        setItensComprados(itensComprados)
+        toastAlerta("Compra Efetuada com Sucesso", 'sucesso')
+        setItens([])
+        setPedido(pedido + 1)
+    }
+
+    function limparCart() {
+        toastAlerta("O Carrinho está vazio", 'info')
+        setItens([])
+    }
+
     return (
-        <AuthContext.Provider value={{ usuario, handleLogin, handleLogout, isLoading }}>
+        <AuthContext.Provider value={{ adicionarProduto, removerProduto, limparCart, comprar, itens, quantidadeItens: quantidadeItensNoCarrinho, usuario, handleLogin, handleLogout, isLoading, itensComprados, pedido }}>
             {children}
         </AuthContext.Provider>
     )
