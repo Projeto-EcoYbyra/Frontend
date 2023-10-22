@@ -1,21 +1,27 @@
 import { Link } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
-
+import { useContext } from 'react'
+import { AuthContext } from '../../../contexts/AuthContext';
 
 interface CardCategoriaProps{
     categoria: Categoria
 }
 
 function CardCategoria({categoria}: CardCategoriaProps) {
+  const { usuario } = useContext(AuthContext)
+  const isAdmin:boolean = usuario.nome === 'Administrador' ? true : false
     return (
-        <><div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
+        <>
+        <div className='border-2 border-lime-900 flex flex-col rounded-2xl overflow-hidden justify-between'>
         <header className='py-2 px-6 bg-lime-800 text-lime-100 font-bold text-2xl'>Categoria</header>
-        <p className='p-8 text-3xl bg-lime-100 h-full'>{categoria.categoria}</p>
+        <p className='p-8 text-center text-3xl bg-lime-100 h-full'>{categoria.categoria}</p>
         <div className="border border-lime-900 "></div>
         <p className='text-black bg-lime-100 w-full flex items-center justify-center'>
           Descrição: {categoria.descricao}
         </p>
-        <div className="flex">
+        {isAdmin === true ? (
+        <>
+          <div className="flex">
           <Link to={`/editarCategoria/${categoria.id}`} className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
             <button>Editar</button>
           </Link>
@@ -23,6 +29,10 @@ function CardCategoria({categoria}: CardCategoriaProps) {
             <button>Deletar</button>
           </Link>
         </div>
+        </>
+        ) : (<></>)  
+      }
+        
       </div>
         </>
     )

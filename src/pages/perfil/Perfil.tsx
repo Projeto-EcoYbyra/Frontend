@@ -3,16 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import loginLogo from '../../assets/mao.jpeg'
 import { toastAlerta } from '../../utils/toastAlerta'
-import { buscar } from '../../../src/services/Service';
-import Produto from '../../models/Produto'
 import CardProdutos from '../../components/produto/cardProdutos/CardProdutos'
 
 function Perfil() {
 
   let navigate = useNavigate()
-  const [produtos, setProdutos] = useState<Produto[]>([]);
-  const { usuario, handleLogout, itensComprados, pedido} = useContext(AuthContext)
-
+  const { usuario, itensComprados, pedido} = useContext(AuthContext)
+  const isAdmin:boolean = usuario.nome === 'Administrador' ? true : false
 
 
   useEffect(() => {
@@ -23,14 +20,17 @@ function Perfil() {
   }, [usuario.token])
 
   return (
-    <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
+    <div className='container mb-4  mx-auto mt-4 rounded-2xl overflow-hidden'>
       <img className='w-full h-72 object-cover border-b-8 border-white' src={loginLogo} alt="Capa do Perfil" />
       <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full w-56 mx-auto mt-[-8rem] border-8 border-white relative z-10' />
       <div className="relative mt-[-6rem] h-72 flex flex-col bg-lime-800 text-lime-100 text-2xl items-center justify-center">
         <p>Nome: {usuario.nome} </p>
         <p>Email: {usuario.usuario}</p>
       </div>
-      <h1 className="text-2xl font-bold tracking-tight text-gray-900 text-center dark:text-verde_claro2 text-[2rem] mt-5">Total de pedidos: {pedido}</h1>
+      {
+        isAdmin === false ? (
+          <>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 text-center dark:text-verde_claro2 text-[2rem] mt-5">Total de pedidos: {pedido}</h1>
             <h2 className='font-bold tracking-tight text-gray-900 dark:text-verde_claro2 mt-5 text-lg ml-5'>Último pedido</h2>
             <div className='flex'>
                 {itensComprados
@@ -40,6 +40,10 @@ function Perfil() {
                   </>
                 ))}
             </div>
+          </>
+        ) : (<></>)
+      } 
+      
     </div>
   )
 }

@@ -15,16 +15,13 @@ function ListaProdutos() {
   var slides = [
     `${bannerNutri}`,
     `${bannerEco}`,       
-    ]
+    ]  
   const [produto, setProdutos] = useState<Produto[]>([]);
-
 
   let navigate = useNavigate();
 
-
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
-
 
   useEffect(() => {
     if (token === '') {

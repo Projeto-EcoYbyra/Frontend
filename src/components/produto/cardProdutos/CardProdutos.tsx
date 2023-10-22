@@ -17,10 +17,11 @@ function CardProdutos({ prod, isPerfil}: CardProdutoProps) {
       setValor(prod.id)
   }, [prod.id]);
 
-  const { adicionarProduto } = useContext(AuthContext)
+  const { usuario, adicionarProduto } = useContext(AuthContext)
+  const isAdmin:boolean = usuario.nome === 'Administrador' ? true : false
 
   return (
-    <div className='border flex flex-col rounded-md overflow-hidden justify-between'>
+    <div className='border-2 border-gray-400 flex flex-col rounded-md overflow-hidden justify-between'>
       <div>
         <div className="flex bg-lime-300 items-center gap-4">
           {/* { 
@@ -72,15 +73,19 @@ function CardProdutos({ prod, isPerfil}: CardProdutoProps) {
           </>               
         </div>
       </div>
-
-      <div className="flex">
-      <Link to={`/editarProduto/${prod.id}`} className='w-full text-black bg-lime-300 hover:bg-lime-700 flex items-center justify-center py-2'>
-          <button>Editar</button>
-      </Link>
-      <Link to={`/deletarProduto/${prod.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
-          <button>Deletar</button>
-        </Link>
-      </div>
+      {isAdmin === true ? (
+        <>
+          <div className="flex">
+            <Link to={`/editarProduto/${prod.id}`} className='w-full text-black bg-lime-300 hover:bg-lime-700 flex items-center justify-center py-2'>
+                <button>Editar</button>
+            </Link>
+            <Link to={`/deletarProduto/${prod.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+                <button>Deletar</button>
+            </Link>
+          </div>
+        </>
+        ) : (<></>)  
+      }
 
     </div>
   )

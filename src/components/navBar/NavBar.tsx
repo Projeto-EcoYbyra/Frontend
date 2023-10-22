@@ -10,11 +10,11 @@ import { ShoppingCartIcon } from '@heroicons/react/20/solid'
 
 // Categorias que aparecem no Navbar o endereço do <login to =""> tem que ser cadastrado no link 
 const navigation = [
-  { name: 'Sobre Nós', href: '#', link: 'SobreNos', current: false },
-  { name: 'Produtos', href: '#', link: 'Produto', current: false },
-  { name: 'Categorias', href: '#', link: 'Categoria', current: false },
-  { name: 'Cadastrar Categoria', href: '#', link: 'cadastroCategoria', current: false },
-  { name: 'Cadastrar Produto', href: '#', link: 'cadastroProduto', current: false },
+  { name: 'Sobre Nós', href: '#', link: 'SobreNos', current: false, onlyAdmin: false },
+  { name: 'Produtos', href: '#', link: 'Produto', current: false , onlyAdmin: false},
+  { name: 'Categorias', href: '#', link: 'Categoria', current: false, onlyAdmin: false},
+  { name: 'Cadastrar Categoria', href: '#', link: 'cadastroCategoria', current: false, onlyAdmin: true },
+  { name: 'Cadastrar Produto', href: '#', link: 'cadastroProduto', current: false, onlyAdmin: true },
 
 ]
 // /Catergorias que aparecem no Navbar
@@ -26,6 +26,7 @@ function Navbar() {
   let navigate = useNavigate()
 
   const { usuario, handleLogout, quantidadeItens } = useContext(AuthContext)
+  const isAdmin:boolean = usuario.nome === 'Administrador' ? true : false
 
   function logout() {
     handleLogout()
@@ -74,7 +75,10 @@ function Navbar() {
                     {/* Mapa dos botões para desktop */}
                     <div className="hidden sm:ml-6 sm:block">
                       <div className="flex space-x-4">
-                        {navigation.map((item) => (
+
+                        {isAdmin === true ? 
+                         navigation                   
+                          .map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
@@ -87,25 +91,52 @@ function Navbar() {
                             {/* Função que faz ir para o botão do clique correspondente */}
                             <Link to={item.link}>{item.name}</Link>
                           </a>
-                        ))}
+                        ))
+                        :
+                        navigation
+                        .filter((item) => item.onlyAdmin === false)
+                        .map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className={classNames(
+                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-lime-100 hover:text-black',
+                            'rounded-md px-3 py-2 text-sm font-medium'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {/* Função que faz ir para o botão do clique correspondente */}
+                          <Link to={item.link}>{item.name}</Link>
+                        </a>
+                        ))     
+                      
+                      }  
                       </div>
                     </div>
                     {/* /Fim Mapa dos botões para desktop */}
 
                   </div>
+                  
                   <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     {/* Carrinho */}
-                    <Link to='/carrinho' className='hover:underline'>
-                      <button
-                        type="button"
-                        className="relative rounded-full bg-lime-100 p-1 text-lime-900 border-2 border-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 mr-2"
-                      >
-                        <span className="absolute -inset-1.5" />
-                        <span className="sr-only">Carrinho</span>
-                        <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
-                        <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-lime-900 bg-[#ecfccb] border-2 border-black rounded-full -top-2 -right-2 dark:border-black dark:bg-[#ecfccb]">{quantidadeItens}</div>
-                      </button>
-                    </Link>
+                    {
+                      isAdmin === false ? (
+                        <>
+                          <Link to='/carrinho' className='hover:underline'>
+                            <button
+                              type="button"
+                              className="relative rounded-full bg-lime-100 p-1 text-lime-900 border-2 border-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 mr-2"
+                            >
+                              <span className="absolute -inset-1.5" />
+                              <span className="sr-only">Carrinho</span>
+                              <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
+                              <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-lime-900 bg-[#ecfccb] border-2 border-black rounded-full -top-2 -right-2 dark:border-black dark:bg-[#ecfccb]">{quantidadeItens}</div>
+                            </button>
+                          </Link>
+                        </>
+                      ) : (<></>)
+                    }
+                    
                     {/* /Carrinho */}
 
                     {/* Menu do Usuário */}
