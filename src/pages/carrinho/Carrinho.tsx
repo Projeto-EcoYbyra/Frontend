@@ -15,7 +15,7 @@ function Carrinho() {
 
     function Comprar() {
         comprar()
-        navigate("/home")
+        navigate("/perfil")
     }
 
     const subtotal = itens.reduce((total, itens) => {
@@ -29,9 +29,15 @@ function Carrinho() {
             <div className='mt-20 subtotal-container dark:bg-black'>
                 <div className='cards-container'>
                     {itens.map((item: any) => (
-                        item.quantidade > 0 && (
+                        (
                             <div className='card'>
-                                <CardProdutos key={item.id} prod={item} noCarrinho={true} />
+                                <p className='dark:text-white'> 
+                                    {item.nome}: 
+                                    R$ {new Intl.NumberFormat('pt-BR', {
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2,
+                                    }).format(item.preco)}
+                                </p>
                             </div>
                         )
                     ))}

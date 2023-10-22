@@ -1,12 +1,19 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import loginLogo from '../../assets/mao.jpeg'
 import { toastAlerta } from '../../utils/toastAlerta'
-function Perfil() {
-  let navigate = useNavigate()
+import { buscar } from '../../../src/services/Service';
+import Produto from '../../models/Produto'
+import CardProdutos from '../../components/produto/cardProdutos/CardProdutos'
 
-  const { usuario } = useContext(AuthContext)
+function Perfil() {
+
+  let navigate = useNavigate()
+  const [produtos, setProdutos] = useState<Produto[]>([]);
+  const { usuario, handleLogout, itensComprados, pedido} = useContext(AuthContext)
+
+
 
   useEffect(() => {
     if (usuario.token === "") {
@@ -23,6 +30,16 @@ function Perfil() {
         <p>Nome: {usuario.nome} </p>
         <p>Email: {usuario.usuario}</p>
       </div>
+      <h1 className="text-2xl font-bold tracking-tight text-gray-900 text-center dark:text-verde_claro2 text-[2rem] mt-5">Total de pedidos: {pedido}</h1>
+            <h2 className='font-bold tracking-tight text-gray-900 dark:text-verde_claro2 mt-5 text-lg ml-5'>Último pedido</h2>
+            <div className='flex'>
+                {itensComprados
+                .map((item) => (
+                  <>
+                    <CardProdutos key={item.id} prod={item} isPerfil={true}/>
+                  </>
+                ))}
+            </div>
     </div>
   )
 }
