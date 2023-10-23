@@ -7,8 +7,8 @@ import { buscar } from '../../../services/Service';
 import CardProdutos from '../cardProdutos/CardProdutos';
 import { toastAlerta } from '../../../utils/toastAlerta';
 import '../cardProdutos/CardProduto.css'
-import bannerNutri from '../../../assets/banner_nutrividas.svg'
-import bannerEco from '../../../assets/banner_ecobag.png'
+import bannerNutri from '../../../assets/PAGAMENTO VERDE.png'
+import bannerEco from '../../../assets/PRODUTOS.png'
 import Carousel from "../../carousel/Carousel";
 
 function ListaProdutos() {
