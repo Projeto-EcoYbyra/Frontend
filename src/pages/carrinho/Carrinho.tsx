@@ -26,7 +26,7 @@ function Carrinho() {
 
     return (
         <>
-            <div className='mt-20 subtotal-container dark:bg-black'>
+            <div className='mt-20 subtotal-container dark:bg-black border-2 border-black mb-10'>
                 <div className='cards-container'>
                     {itens.map((item: any) => (
                         (
@@ -48,7 +48,7 @@ function Carrinho() {
                         maximumFractionDigits: 2,
                     }).format(subtotal)}</h1>
 
-                    <div className='btn-subtotal mt-3 p-2'>
+                    <div className='btn-subtotal mt-3 p-2 border-2 border-lime-900'>
                         <button className={`px-3 py-2 text-sm font-medium text-center text-white bg-red-800 transition-all duration-300 ease-in-out rounded-lg hover:bg-red-600 focus:outline-none ${subtotal > 0 ? 'dark:bg-red-500 dark:hover:bg-white dark:hover:text-black' : 'opacity-50 cursor-not-allowed'}`}
                             onClick={limparCart}
                             disabled={subtotal === 0}> Limpar carrinho
@@ -58,8 +58,9 @@ function Carrinho() {
                         </button>
                     </div>
                     <h1 className='font-bold text-lg dark:text-white mt-5 ml-5'>Selecione a forma de pagamento: </h1>
-                    <div className='flex flex-col p-3 justify-center'>
-                        <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700 mt-5">
+                    {/* div das formas de pagamento */}
+                    <div className='pt-4 flex flex-inline  p-1 justify-center gap-10 border-2 border-lime-300'>
+                        <div className="mb-2 payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
                             <div className='static itens-center'>
                                 <input
                                     type="radio"
@@ -70,7 +71,7 @@ function Carrinho() {
                                 <label htmlFor="pagamento verde" className='ml-5'><p className='font-bold text-lg dark:text-white'>Pagamento Verde 🌳</p></label>
                             </div>
                         </div>
-                        <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
+                        <div className="mb-2 payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
                             <div className='static itens-center'>
                                 <input
                                     type="radio"
@@ -82,7 +83,7 @@ function Carrinho() {
                                 <label htmlFor="pix" className='ml-5'><p className='font-bold text-lg dark:text-white'>PIX ❖</p></label>
                             </div>
                         </div>
-                        <div className="payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
+                        <div className="mb-2 payment-option transition-transform duration-300 ease-in-out transform hover:scale-110 dark:bg-verde_escuro dark:border-gray-700">
                             <div className='static itens-center'>
                                 <input
                                     type="radio"
@@ -94,9 +95,10 @@ function Carrinho() {
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-center'>
+                    {/* div botão finalizar */}
+                    <div className='flex justify-center mb-3'>
                         <button 
-                            className={`px-3 mt-5 py-2 text-sm font-medium text-center text-white bg-[#03A678] transition-all duration-300 ease-in-out rounded-lg hover:bg-[#014040] focus:outline-none ${selectedPayment && subtotal > 0 ? 'dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black' : 'opacity-50 cursor-not-allowed'}`}
+                            className={`px-3 mt-5 py-2 text-sm font-medium text-center text-white bg-[#03A678] transition-all duration-300 ease-in-out rounded-lg hover:bg-[#014040] focus:outline-none  ${selectedPayment && subtotal > 0 ? 'dark:bg-verde_claro2 dark:hover:bg-white dark:hover:text-black' : 'opacity-50 cursor-not-allowed'}`}
                             onClick={Comprar}
                             disabled={subtotal === 0 || !selectedPayment}> Finalizar Compra </button>
                     </div>
