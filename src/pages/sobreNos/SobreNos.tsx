@@ -1,12 +1,9 @@
-import React from 'react';
 import './SobreNos.css';
-
 
 function SobreNos() {
     return (
         <><div>
             
-
         </div>
             <section className="bg-lime-100 dark:bg-gray-900">
                 <div className="mx-auto max-w-screen-sm text-justify mb-8 lg:mb-16">
@@ -67,7 +64,7 @@ function SobreNos() {
             <section className="bg-lime-100 dark:bg-gray-900">
                 {/* Div que fala sobre a equipe */}
 
-                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6 ">
                     <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
                     
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Nosso Time</h2>

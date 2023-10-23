@@ -241,6 +241,7 @@ function Navbar() {
     const navigation = [
       { name: 'Cadastre-se', href: '#', link: 'cadastro', current: false },
       { name: 'Sobre Nós', href: '#', link: 'SobreNos', current: false },
+      { name: 'Parceiros', href: '#', link: 'Parceiros', current: false},
     ]
     navbarComponent = (
     <Disclosure as="nav" className="bg-lime-800">
