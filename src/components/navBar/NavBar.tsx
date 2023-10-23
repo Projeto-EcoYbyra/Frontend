@@ -13,11 +13,12 @@ const navigation = [
   { name: 'Sobre Nós', href: '#', link: 'SobreNos', current: false, onlyAdmin: false },
   { name: 'Produtos', href: '#', link: 'Produto', current: false , onlyAdmin: false},
   { name: 'Categorias', href: '#', link: 'Categoria', current: false, onlyAdmin: false},
+  { name: 'Parceiros', href: '#', link: 'Parceiros', current: false, onlyAdmin: false},
   { name: 'Cadastrar Categoria', href: '#', link: 'cadastroCategoria', current: false, onlyAdmin: true },
   { name: 'Cadastrar Produto', href: '#', link: 'cadastroProduto', current: false, onlyAdmin: true },
 
 ]
-// /Catergorias que aparecem no Navbar
+// Catergorias que aparecem no Navbar
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')

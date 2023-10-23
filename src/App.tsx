@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 
 import Navbar from './components/navBar/NavBar';
@@ -19,6 +18,7 @@ import DeletarProdutos from './components/produto/deletarProdutos/DeletarProduto
 import FormularioProdutos from './components/produto/formularioProdutos/FormularioProdutos';
 import Perfil from './pages/perfil/Perfil';
 import Carrinho from './pages/carrinho/Carrinho';
+import Parceiros from './pages/parceiros/Parceiros'
 
 function App() {
   return (
@@ -44,6 +44,8 @@ function App() {
               <Route path="/editarProduto/:id" element={<FormularioProdutos />} />
               <Route path="/carrinho" element={<Carrinho />} />
               <Route path="/perfil" element={<Perfil />} />
+              <Route path="/parceiros" element={<Parceiros />} />
+
             </Routes>
           </div>
           <Footer />
