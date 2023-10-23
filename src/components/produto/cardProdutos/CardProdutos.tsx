@@ -6,7 +6,6 @@ import './CardProduto.css'
 
 interface CardProdutoProps {
   prod: Produto
-  noCarrinho?: boolean;
   isPerfil: boolean;
 }
 
@@ -24,15 +23,6 @@ function CardProdutos({ prod, isPerfil}: CardProdutoProps) {
     <div className='border-2 border-gray-400 flex flex-col rounded-md overflow-hidden justify-between'>
       <div>
         <div className="flex bg-lime-300 items-center gap-4">
-          {/* { 
-          isPerfil === false ? (
-            <>            
-              <img src={prod.foto} className='img-produto rounded-e-sm' alt="" /> 
-            </>
-          ) : (
-            <></>
-          )
-          } */}
           <img src={prod.foto} className='img-produto rounded-e-sm' alt="" /> 
         </div>
         <div className='p-4'>

@@ -8,13 +8,13 @@ import CardProdutos from '../cardProdutos/CardProdutos';
 import { toastAlerta } from '../../../utils/toastAlerta';
 import '../cardProdutos/CardProduto.css'
 import bannerNutri from '../../../assets/banner_nutrividas.svg'
-import bannerEco from '../../../assets/banner_ecobag.svg'
+import bannerEco from '../../../assets/banner_ecobag.png'
 import Carousel from "../../carousel/Carousel";
 
 function ListaProdutos() {
   var slides = [
     `${bannerNutri}`,
-    `${bannerEco}`,       
+    `${bannerEco}`,     
     ]  
   const [produto, setProdutos] = useState<Produto[]>([]);
 
