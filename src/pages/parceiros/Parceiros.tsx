@@ -2,14 +2,13 @@ function Parceiros() {
 
   return (
     <>
-     
-
-      <section className="bg-lime-100 dark:bg-gray-900 mt-20">
+    
+      <section className="bg-lime-100 dark:bg-gray-900 my-20 lg:my-32">
                 
                 {/* Div que fala sobre os parceiros */}
 
-                <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6">
-                    <div className="mx-auto max-w-screen-sm mb-8 lg:mb-16 border-b-4 border-lime-900">
+                <div className="py-8 px-4 max-w-screen-xl lg:py-8 lg:px-6">
+                    <div className="mx-auto max-w-screen-sm mb-8 border-b-4 border-lime-900">
 
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white border-b-4 border-lime-900 pb-5">Nossos Parceiros</h2>
                         <p className="font-normal text-lime-800 lg:mb-6 sm:text-xl dark:text-gray-400 text-justify">
