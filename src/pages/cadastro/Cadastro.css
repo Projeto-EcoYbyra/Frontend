@@ -1,8 +1,9 @@
 .fundoCadastro {
-      background-image: url(../../assets/ecoybyra_2.png);
+      background-image: url(../../assets/mao-da-campanha-do-dia-da-terra-mostrando-arvore-em-uma-mistura-de-midia-de-bolha.jpg);
       background-repeat: no-repeat;
       width: 100%;
       min-height: 100vh;
       background-size: cover;
       background-position: center;
+      background-color: #ecfccb;
   }

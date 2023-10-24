@@ -20,7 +20,7 @@ function CardProdutos({ prod, isPerfil}: CardProdutoProps) {
   const isAdmin:boolean = usuario.nome === 'Administrador' ? true : false
 
   return (
-    <div className='border-2 border-gray-400 flex flex-col rounded-md overflow-hidden justify-between'>
+    <div className='bg-lime-100 border-2  flex flex-col rounded-md overflow-hidden justify-between'>
       <div>
         <div className="flex bg-lime-300 items-center gap-4">
           <img src={prod.foto} className='img-produto rounded-e-sm' alt="" /> 

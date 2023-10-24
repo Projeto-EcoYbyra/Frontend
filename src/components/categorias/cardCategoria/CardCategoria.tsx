@@ -22,7 +22,7 @@ function CardCategoria({categoria}: CardCategoriaProps) {
         {isAdmin === true ? (
         <>
           <div className="flex">
-          <Link to={`/editarCategoria/${categoria.id}`} className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+          <Link to={`/editarCategoria/${categoria.id}`} className='w-full text-slate-100 bg-lime-300 hover:bg-lime-700 flex items-center justify-center py-2'>
             <button>Editar</button>
           </Link>
           <Link to={`/deletarCategoria/${categoria.id}`} className='text-slate-100 bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
