@@ -2,82 +2,80 @@ import './SobreNos.css';
 
 function SobreNos() {
     return (
-        <><div>
-            
-        </div>
-            <section className="bg-lime-100 dark:bg-gray-900">
-                <div className="mx-auto max-w-screen-sm text-justify mb-8 lg:mb-16">
-                <h2 className="text-center mt-4 mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Sobre Nós</h2>
-                <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
-                    A EcoYbyrá é uma empresa fictícia dedicada à criação de soluções em conformidade com os Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pela ONU,
-                    com foco no tema 17 - Parcerias e Meios de Implementação. 
-                    Dessa forma, desenvolvemos uma plataforma de e-commerce inovadora que incentiva a adoção de práticas 
-                    sustentáveis e visa fortalecer parceria com pequenos produtores, comunidades e instituições que apoiam e 
-                    praticam o desenvolvimento da conscientização sustentável e do compartilhamento de recursos.
-                </p>
-                <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
-                <h3 className='font-bold  text-lime-800 mb-2'>Catálogo Abrangente</h3>
-                    A EcoYbyrá oferece uma ampla gama de produtos que são fornecidos por pequenos produtores e comunidades locais, 
-                    sendo desde sementes orgânicas, suprimentos para hortas urbanas e fertilizantes naturais até 
-                    ferramentas de jardim de alta qualidade utilizando materiais sustentáveis e métodos de produção tradicionais.
-                </p>
-                <p className="font-normal text-gray-800 lg:mb-16 sm:text-xl dark:text-gray-400">
-                <h3 className='font-bold  text-lime-800 mb-2'>Seleção Criteriosa</h3>    
-                    Cada produto disponível na plataforma é cuidadosamente selecionado com base em critérios de sustentabilidade, qualidade e eficácia. 
-                    A ênfase é dada a produtos que minimizam o impacto ambiental.
-                </p>
-                </div> 
-            </section>   
+        <>
+            <section className="bg-lime-100 dark:bg-gray-900 mt-10 mb-10 p-10">
+                <div className="mx-auto max-w-screen-sm text-justify">
+                    <h2 className="text-center mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Sobre Nós</h2>
+                    <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
+                        A EcoYbyrá é uma empresa fictícia dedicada à criação de soluções em conformidade com os Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pela ONU,
+                        com foco no tema 17 - Parcerias e Meios de Implementação.
+                        Dessa forma, desenvolvemos uma plataforma de e-commerce inovadora que incentiva a adoção de práticas
+                        sustentáveis e visa fortalecer parceria com pequenos produtores, comunidades e instituições que apoiam e
+                        praticam o desenvolvimento da conscientização sustentável e do compartilhamento de recursos.
+                    </p>
+                    <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
+                        <h3 className='font-bold  text-lime-800 mb-2'>Catálogo Abrangente</h3>
+                        A EcoYbyrá oferece uma ampla gama de produtos que são fornecidos por pequenos produtores e comunidades locais,
+                        sendo desde sementes orgânicas, suprimentos para hortas urbanas e fertilizantes naturais até
+                        ferramentas de jardim de alta qualidade utilizando materiais sustentáveis e métodos de produção tradicionais.
+                    </p>
+                    <p className="font-normal text-gray-800 sm:text-xl dark:text-gray-400">
+                        <h3 className='font-bold  text-lime-800 mb-2'>Seleção Criteriosa</h3>
+                        Cada produto disponível na plataforma é cuidadosamente selecionado com base em critérios de sustentabilidade, qualidade e eficácia.
+                        A ênfase é dada a produtos que minimizam o impacto ambiental.
+                    </p>
+                </div>
+            </section>
 
-                    {/* sessão de recado para os produtores e clientes */}
-            <section className='bg-lime-100 dark:bg-gray-900 flex'>
-                    <div className='mx-auto max-w-screen-sm text-justify mb-8 lg:mb-16'>
-                        <div className='border-b-4 border-lime-900 pl-2 pr-6'>
+            {/* sessão de recado para os produtores e clientes */}
+            <section className='bg-lime-100 dark:bg-gray-900 flex mb-10 p-10'>
+                <div className='mx-auto max-w-screen-sm text-justify'>
+                    <div className='border-b-4 border-lime-900 pl-2 pr-6'>
                         <h2 className='font-bold italic text-center text-lime-800 mb-2'>Ei, você, pequeno produtor ou artesão!</h2>
-                        <p className="font-normal text-gray-800 lg:mb-2 sm:text-lg dark:text-gray-400">    
-                        Se você é um produtor ou artesão apaixonado pela sustentabilidade, que cria produtos inovadores 
-                        feitos com materiais sustentáveis e que demonstrem um compromisso genuíno com a preservação 
-                        do meio ambiente, este espaço é para você, portanto, sinta-se a vontade para divulgar e vender seus produtos. 
-                        </p>
-                        <p className="font-normal text-gray-800 lg:mb-6 sm:text-lg dark:text-gray-400"> 
-                        Acreditamos que juntos podemos criar um impacto positivo no mundo ao oferecer alternativas
-                        sustentáveis para os consumidores.
-                        </p> 
-                        </div>
-                        <div className='pl-2 pr-6'>
-                        <h3 className='font-bold italic text-center text-lime-800 mt-4 mb-2'>Ei, você, consumidor consciente!</h3>
-                        <p className="font-normal  text-gray-800 lg:mb-2 sm:text-lg dark:text-gray-400">    
-                        Se você busca uma forma de fazer compras que esteja alinhada com seus valores ambientais e de saúde, 
-                        você está no lugar certo!
-                        </p>
                         <p className="font-normal text-gray-800 lg:mb-2 sm:text-lg dark:text-gray-400">
-                        Nossa seleção cuidadosamente curada oferece uma variedade de opções, todos provenientes de fontes sustentáveis e orgânicas.
+                            Se você é um produtor ou artesão apaixonado pela sustentabilidade, que cria produtos inovadores
+                            feitos com materiais sustentáveis e que demonstrem um compromisso genuíno com a preservação
+                            do meio ambiente, este espaço é para você, portanto, sinta-se a vontade para divulgar e vender seus produtos.
                         </p>
-                        <p className="font-normal text-gray-800 lg:mb-2 sm:text-lg dark:text-gray-400">
-                        Ao escolher comprar conosco, você está investindo em um futuro mais verde e saudável para o nosso planeta
-                        e para as gerações futuras.
-                        </p> 
-                        </div>
+                        <p className="font-normal text-gray-800 lg:mb-6 sm:text-lg dark:text-gray-400">
+                            Acreditamos que juntos podemos criar um impacto positivo no mundo ao oferecer alternativas
+                            sustentáveis para os consumidores.
+                        </p>
                     </div>
-            </section>   
+                    <div className='pl-2 pr-6'>
+                        <h3 className='font-bold italic text-center text-lime-800 mt-4 mb-2'>Ei, você, consumidor consciente!</h3>
+                        <p className="font-normal  text-gray-800 lg:mb-2 sm:text-lg dark:text-gray-400">
+                            Se você busca uma forma de fazer compras que esteja alinhada com seus valores ambientais e de saúde,
+                            você está no lugar certo!
+                        </p>
+                        <p className="font-normal text-gray-800 lg:mb-2 sm:text-lg dark:text-gray-400">
+                            Nossa seleção cuidadosamente curada oferece uma variedade de opções, todos provenientes de fontes sustentáveis e orgânicas.
+                        </p>
+                        <p className="font-normal text-gray-800 sm:text-lg dark:text-gray-400">
+                            Ao escolher comprar conosco, você está investindo em um futuro mais verde e saudável para o nosso planeta
+                            e para as gerações futuras.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-            <section className="bg-lime-100 dark:bg-gray-900">
+            <section className="bg-lime-100 dark:bg-gray-900 mb-10">
                 {/* Div que fala sobre a equipe */}
 
                 <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-8 lg:px-6 ">
                     <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-                    
+
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Nosso Time</h2>
                         <p className="font-normal text-lime-800 lg:mb-16 sm:text-xl dark:text-gray-400">Nosso time é composto por profissionais formados pela Generation Brasil. Somos desenvolvedores fullstack apaixonados pela mudança e acreditamos na transformação do mundo através da tecnologia.</p>
                     </div>
 
-                    {/* Div colaborador Guilheme Martins */}
+                    {/* Div Nosso time */}
 
-                    <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-800">
-                            <a href="#">
-                                <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1CukwnjFKbVsZCo1QbPJtRWBnbwNuI4HN" alt="Guilherme Foto" />
-                            </a>
+                    <div className="grid gap-8 mb-3 md:grid-cols-2">
+
+                        {/* Div colaborador Guilheme Martins */}
+                        <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2">
+                            <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1CukwnjFKbVsZCo1QbPJtRWBnbwNuI4HN" alt="Guilherme Foto" />
                             <div className="p-5">
                                 <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                     <a>GUILHERME MARTINS</a>
@@ -106,10 +104,8 @@ function SobreNos() {
 
                         {/* Div colaborador Matheus Moraes */}
 
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-800">
-                            <a href="#">
-                                <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1c-P5xMnpFCZwRBXZPu5CKaLtHIJJEkPm" alt="Matheus Foto" />
-                            </a>
+                        <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2">
+                            <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1c-P5xMnpFCZwRBXZPu5CKaLtHIJJEkPm" alt="Matheus Foto" />
                             <div className="p-5">
                                 <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                     <a>MATHEUS MORAES</a>
@@ -138,10 +134,8 @@ function SobreNos() {
 
                         {/* Div colaboradora Nathany Morais */}
 
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-800">
-                            <a href="#">
-                                <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1CaFw_DTmKKU4L97oL3jd2QyGMyuHyYfP" alt="Nathany Foto" />
-                            </a>
+                        <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2">
+                            <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1CaFw_DTmKKU4L97oL3jd2QyGMyuHyYfP" alt="Nathany Foto" />
                             <div className="p-5">
                                 <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                     <a>NATHANY MORAIS</a>
@@ -171,10 +165,8 @@ function SobreNos() {
 
                         {/* Div Colaborador Pedro Moreira */}
 
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-800">
-                            <a href="#">
-                                <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1TB4ipohSQw3zhOMWp8PSQi_mV7KsZjsW" alt="Pedro Foto" />
-                            </a>
+                        <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2">
+                            <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1TB4ipohSQw3zhOMWp8PSQi_mV7KsZjsW" alt="Pedro Foto" />
                             <div className="p-5">
                                 <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                     <a>PEDRO MOREIRA</a>
@@ -204,10 +196,8 @@ function SobreNos() {
 
                         {/* Div Colaboradora Priscila Igarashi */}
 
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-800">
-                            <a href="#">
-                                <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1Mw9Z_fakn58zaAhNSANd4wgolQLyI9m7" alt="Priscila Foto" />
-                            </a>
+                        <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2">
+                            <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1Mw9Z_fakn58zaAhNSANd4wgolQLyI9m7" alt="Priscila Foto" />
                             <div className="p-5">
                                 <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                     <a>PRISCILA IGARASHI</a>
@@ -237,10 +227,8 @@ function SobreNos() {
 
                         {/* Div colaborador Richard Campos */}
 
-                        <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-800">
-                            <a href="#">
-                                <img className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=11-4P3VaseiT2GyLgt9y3wfYhakutPm2v" alt="Richard Foto" />
-                            </a>
+                        <div className="flex flex-col items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2">
+                            <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=11-4P3VaseiT2GyLgt9y3wfYhakutPm2v" alt="Richard Foto" />
                             <div className="p-5">
                                 <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                     <a>RICHARD CAMPOS</a>
