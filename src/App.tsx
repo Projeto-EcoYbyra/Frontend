@@ -27,7 +27,7 @@ function App() {
     <ToastContainer />
         <BrowserRouter>
           <Navbar />
-          <div className='min-h-[80vh]'>
+          <div className='min-h-[80vh] limit'>
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/login" element={<Login />} />
@@ -45,7 +45,6 @@ function App() {
               <Route path="/carrinho" element={<Carrinho />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/parceiros" element={<Parceiros />} />
-
             </Routes>
           </div>
           <Footer />
