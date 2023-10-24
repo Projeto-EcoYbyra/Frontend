@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { Hearts } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
@@ -55,13 +55,14 @@ function ListaProdutos() {
   return (
     <>
       {produto.length === 0 && (
-        <Dna
-          visible={true}
-          height="200"
-          width="200"
-          ariaLabel="dna-loading"
-          wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
+        <Hearts
+        visible={true}
+        color="#4fa94d"
+        height="200"
+        width="200"
+        ariaLabel="hearts-loading"
+        wrapperStyle={{}}
+        wrapperClass="hearts-wrapper mx-auto justify-center"
         />
       )}
             <Carousel autoSlide={true} autoSlideInterval={3000} >

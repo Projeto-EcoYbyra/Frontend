@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { Hearts } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -42,13 +42,14 @@ function ListaCategoria() {
   return (
     <>
       {categoria.length === 0 && (
-        <Dna
+        <Hearts
           visible={true}
+          color="#4fa94d"
           height="200"
           width="200"
-          ariaLabel="dna-loading"
+          ariaLabel="hearts-loading"
           wrapperStyle={{}}
-          wrapperClass="dna-wrapper mx-auto"
+          wrapperClass="hearts-wrapper mx-auto justify-center"
         />
       )}
       <div className="flex justify-center w-full my-4">
