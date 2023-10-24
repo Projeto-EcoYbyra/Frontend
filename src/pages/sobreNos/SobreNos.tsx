@@ -7,11 +7,12 @@ function SobreNos() {
                 <div className="mx-auto max-w-screen-sm text-justify">
                     <h2 className="text-center mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Sobre Nós</h2>
                     <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
-                        A EcoYbyrá é uma empresa dedicada à criação de soluções em conformidade com os Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pela ONU,
-                        com foco no tema 17 - Parcerias e Meios de Implementação.
+                        A EcoYbyrá - do Tupi-Guarani: "eko" (casa, moradia) e "ybyrá" (terra, árvore) - 
+                        é uma empresa dedicada à criação de soluções em conformidade com os Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pela ONU,
+                        com foco no tema 17 - Fortalecer parcerias e Meios de Implementação.
                         Dessa forma, desenvolvemos uma plataforma de e-commerce inovadora que incentiva a adoção de práticas
                         sustentáveis e visa fortalecer parceria com pequenos produtores, comunidades e instituições que apoiam e
-                        praticam o desenvolvimento da conscientização sustentável e do compartilhamento de recursos.
+                        praticam o desenvolvimento da conscientização sustentável, do compartilhamento de recursos e da ajuda humanitária.
                     </p>
                     <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
                         <h3 className='font-bold  text-lime-800 mb-2'>Catálogo Abrangente</h3>
