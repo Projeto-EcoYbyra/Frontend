@@ -179,18 +179,6 @@ function Navbar() {
                           </Menu.Item>
                           <Menu.Item>
                             {({ active }) => (
-                              <Link to='/cadastro' className='hover:underline'>
-                              <a
-                                href="#"
-                                className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                              >
-                                Cadastrar
-                              </a>
-                            </Link>
-                            )}
-                          </Menu.Item>
-                          <Menu.Item>
-                            {({ active }) => (
                               <Link to='' onClick={logout} className='hover:underline'>
                                 <a
                                   href="#"
@@ -219,7 +207,7 @@ function Navbar() {
                       as="a"
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-lime-100 hover:text-black',
                         'block rounded-md px-3 py-2 text-base font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}

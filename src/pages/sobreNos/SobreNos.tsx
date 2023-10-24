@@ -7,7 +7,7 @@ function SobreNos() {
                 <div className="mx-auto max-w-screen-sm text-justify">
                     <h2 className="text-center mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Sobre Nós</h2>
                     <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
-                        A EcoYbyrá é uma empresa fictícia dedicada à criação de soluções em conformidade com os Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pela ONU,
+                        A EcoYbyrá é uma empresa dedicada à criação de soluções em conformidade com os Objetivos de Desenvolvimento Sustentável (ODS) estabelecidos pela ONU,
                         com foco no tema 17 - Parcerias e Meios de Implementação.
                         Dessa forma, desenvolvemos uma plataforma de e-commerce inovadora que incentiva a adoção de práticas
                         sustentáveis e visa fortalecer parceria com pequenos produtores, comunidades e instituições que apoiam e
@@ -16,13 +16,19 @@ function SobreNos() {
                     <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
                         <h3 className='font-bold  text-lime-800 mb-2'>Catálogo Abrangente</h3>
                         A EcoYbyrá oferece uma ampla gama de produtos que são fornecidos por pequenos produtores e comunidades locais,
-                        sendo desde sementes orgânicas, suprimentos para hortas urbanas e fertilizantes naturais até
-                        ferramentas de jardim de alta qualidade utilizando materiais sustentáveis e métodos de produção tradicionais.
+                        sendo desde sementes e verduras orgânicas e suprimentos para hortas urbanas até 
+                        itens de cozinha de alta qualidade utilizando materiais sustentáveis e métodos de produção tradicionais.
                     </p>
-                    <p className="font-normal text-gray-800 sm:text-xl dark:text-gray-400">
+                    <p className="font-normal text-gray-800 lg:mb-6 sm:text-xl dark:text-gray-400">
                         <h3 className='font-bold  text-lime-800 mb-2'>Seleção Criteriosa</h3>
                         Cada produto disponível na plataforma é cuidadosamente selecionado com base em critérios de sustentabilidade, qualidade e eficácia.
                         A ênfase é dada a produtos que minimizam o impacto ambiental.
+                    </p>
+                    <p className="font-normal text-gray-800 sm:text-xl dark:text-gray-400">
+                        <h3 className='font-bold  text-lime-800 mb-2'>Impacto Positivo</h3>
+                        Cada compra realizada contribui para um mundo mais sustentável, apoiando artesãos e produtores locais, práticas de consumo responsáveis 
+                        e a redução do impacto ambiental através do <a href='https://www.ibflorestas.org.br/programas-socioambientaiss/pagamento-verde16' target='_blank' className='font-bold text-lime-700 hover:underline'>Pagamento Verde</a>, 
+                        em que um percentual de nossa receita é destinado ao reflorestamento e recuperação de áreas de reserva legal.
                     </p>
                 </div>
             </section>
@@ -66,7 +72,10 @@ function SobreNos() {
                     <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
 
                         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-lime-900 dark:text-white">Nosso Time</h2>
-                        <p className="font-normal text-lime-800 lg:mb-16 sm:text-xl dark:text-gray-400">Nosso time é composto por profissionais formados pela Generation Brasil. Somos desenvolvedores fullstack apaixonados pela mudança e acreditamos na transformação do mundo através da tecnologia.</p>
+                        <p className="font-normal text-gray-800 lg:mb-16 sm:text-xl dark:text-gray-400">
+                            Nosso time é composto por profissionais formados pela Generation Brasil. Somos desenvolvedores fullstack 
+                            apaixonados pela mudança e acreditamos na transformação do mundo através da tecnologia.
+                        </p>
                     </div>
 
                     {/* Div Nosso time */}
