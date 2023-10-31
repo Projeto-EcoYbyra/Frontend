@@ -76,7 +76,7 @@ function Navbar() {
                     {/* Mapa dos botões para desktop */}
                     <div className="hidden sm:ml-6 sm:block">
                       <div className="flex space-x-4">
-
+                    
                         {isAdmin === true ? 
                          navigation                   
                           .map((item) => (
@@ -94,6 +94,7 @@ function Navbar() {
                           </a>
                         ))
                         :
+                        // filtro para que não seja exibida as funcionalidades do Admin ao usário comun
                         navigation
                         .filter((item) => item.onlyAdmin === false)
                         .map((item) => (
@@ -201,7 +202,11 @@ function Navbar() {
               {/* Mapa dos botões para Mobille */}
               <Disclosure.Panel className="sm:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2">
-                  {navigation.map((item) => (
+                {
+                  isAdmin === true ? (
+                    <>
+                    {navigation
+                  .map((item) => (
                     <Disclosure.Button
                       key={item.name}
                       as="a"
@@ -216,6 +221,29 @@ function Navbar() {
                       <Link to={item.link} className='hover:underline'>{item.name}</Link>
                     </Disclosure.Button>
                   ))}
+                    </>
+                  ) : ( 
+                  <>
+                  {navigation
+                  .filter((item) => item.onlyAdmin === false)
+                  .map((item) => (
+                    <Disclosure.Button
+                      key={item.name}
+                      as="a"
+                      href={item.href}
+                      className={classNames(
+                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-lime-100 hover:text-black',
+                        'block rounded-md px-3 py-2 text-base font-medium'
+                      )}
+                      aria-current={item.current ? 'page' : undefined}
+                    >
+                      {/* Função que faz ir para o botão do clique correspondente */}
+                      <Link to={item.link} className='hover:underline'>{item.name}</Link>
+                    </Disclosure.Button>
+                  ))}
+                  </>)
+                }              
+                  
                 </div>
                 {/* Fim Mapa dos botões para Mobille */}
               </Disclosure.Panel>

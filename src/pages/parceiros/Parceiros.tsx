@@ -3,7 +3,7 @@ function Parceiros() {
     return (
         <>
 
-            <section className="bg-lime-100 dark:bg-gray-900 my-20 lg:my-32">
+            <section className="bg-lime-100 dark:bg-gray-900 my-20 lg:my-32 flex align-middle justify-center">
 
                 {/* Div que fala sobre os parceiros */}
 
