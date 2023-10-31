@@ -1,3 +1,5 @@
+import {} from '../../components/produto/cardProdutos/CardProduto.css'
+
 function Parceiros() {
 
     return (
@@ -34,13 +36,13 @@ function Parceiros() {
                         {/* Div parceiro Raízes Livres */}
                         <a className="border-2 rounded-2xl p-1 border-lime-900" href="https://raizes-livres.netlify.app/" target="_blank">
                             <div className="w-full  sm:h-full flex flex-col items-center bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2 border-2 rounded-2xl border-lime-900">
-                                <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1h8pgW-ewdEe7R2GfRyXHeozN4kRyeXhY" alt="Raízes Livres" />
+                                <img className="w-full img-produto sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1h8pgW-ewdEe7R2GfRyXHeozN4kRyeXhY" alt="Raízes Livres" />
                                 <div className="p-5">
                                     <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                         <a>Raízes Livres</a>
                                     </h3>
                                     <span className="text-gray-800 dark:text-gray-400">Descubra nosso compromisso com alimentos sustentáveis</span>
-                                    <p className="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400">Plataforma de e-commerce com o propósito de combater a fome e promover a alimentação sustentável.</p>
+                                    <p className="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400">Plataforma de e-commerce baseada na ODS 2 - Fome Zero e Agricultura Sustentável, com o propósito de combater a fome e promover a alimentação sustentável.</p>
                                 </div>
                             </div>
                         </a>
@@ -84,8 +86,8 @@ function Parceiros() {
                                     <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
                                         <a>SaviOurFood</a>
                                     </h3>
-                                    <span className="text-gray-800 dark:text-gray-400">Juntos, podemos reduzir o desperdício de alimentos, economizar dinheiro e, mais importante, fazer a diferença na vida daqueles que precisam.</span>
-                                    <p className="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400">Plataforma de e-commerce baseada na ODS 2 - Fome Zero. Tem por objetivo combater o desperdício de alimentos e promover a solidariedade em nossas comunidades.</p>
+                                    <span className="text-gray-800 dark:text-gray-400">Juntos podemos reduzir o desperdício de alimentos, economizar dinheiro e fazer a diferença na vida daqueles que precisam.</span>
+                                    <p className="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400">Plataforma de e-commerce baseada na ODS 10 - Redução das desigualdades. Concentrou-se em combater o desperdício de alimentos e promover a solidariedade em nossas comunidades.</p>
                                 </div>
                             </div>
                         </a>
