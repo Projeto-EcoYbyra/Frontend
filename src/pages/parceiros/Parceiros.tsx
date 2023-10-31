@@ -61,6 +61,35 @@ function Parceiros() {
                         </a>
                         {/* Fim Div parceiro MaternaCare */}
 
+                        {/* Div parceiro É de Todos */}
+                        <a className="border-2 rounded-2xl p-1 border-lime-900" href="https://edetodos.netlify.app/" target="_blank">
+                            <div className="w-full  sm:h-full flex flex-col items-center bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2 border-2 rounded-2xl border-lime-900">
+                                <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1_p1ogbyCt0wZkXFZwT4syX8zyv0WnMTU" alt="Logo É de Todos" />
+                                <div className="p-5">
+                                    <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
+                                        <a>É de Todos</a>
+                                    </h3>
+                                    <span className="text-gray-800 dark:text-gray-400">O conhecimento é de todos e nosso curso também</span>
+                                    <p className="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400">Plataforma de e-commerce baseada na ODS 4 - Educação de Qualidade. Tem por objetivo trazer aprendizagem personalida, ferramentas para a capicitação de professores e cursos com conteúdo confiável.</p>
+                                </div>
+                            </div>
+                        </a>
+                        {/* Fim Div parceiro É de todos */}
+                        
+                        {/* Div parceiro Savi our food*/}
+                        <a className="border-2 rounded-2xl p-1 border-lime-900" href="https://saviourfood.netlify.app/" target="_blank">
+                            <div className="w-full  sm:h-full flex flex-col items-center bg-gray-50 shadow dark:bg-gray-800 dark:border-gray-800 sm:grid sm:grid-cols-2 border-2 rounded-2xl border-lime-900">
+                                <img className="w-full  sm:h-full rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://drive.google.com/uc?export=view&id=1ke-tsmgOmijVFL7SnRWKawlY83MWBUap" alt="Logo Savi our food" />
+                                <div className="p-5">
+                                    <h3 className="text-xl font-bold tracking-tight text-lime-900 dark:text-white">
+                                        <a>SaviOurFood</a>
+                                    </h3>
+                                    <span className="text-gray-800 dark:text-gray-400">Juntos, podemos reduzir o desperdício de alimentos, economizar dinheiro e, mais importante, fazer a diferença na vida daqueles que precisam.</span>
+                                    <p className="mt-3 mb-4 font-light text-gray-800 dark:text-gray-400">Plataforma de e-commerce baseada na ODS 2 - Fome Zero. Tem por objetivo combater o desperdício de alimentos e promover a solidariedade em nossas comunidades.</p>
+                                </div>
+                            </div>
+                        </a>
+                        {/* Fim Div parceiro SaviOurFood */}
                     </div>
                 </div>
             </section>
